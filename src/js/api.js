@@ -1,0 +1,1 @@
+var api = 'http://sdtapi.xmwula.com'
