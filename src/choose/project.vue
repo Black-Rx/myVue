@@ -99,7 +99,7 @@
   .projectImg{
     padding: 15px;
   }
-  p{
+  .project p{
     margin: 0; 
   }
   .pull-left{

@@ -43,7 +43,7 @@
           if(this.item==""){
             this.noItem=true
           }
-          console.log(this.item)
+          // console.log(this.item)
         })
         .catch((error)=>{
           this.$message.error("未知错误，请重试")

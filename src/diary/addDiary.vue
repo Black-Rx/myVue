@@ -44,7 +44,7 @@
 
             <div class="progress" v-for="item in ListProgress">
               <span>{{item.name}}</span>
-              <el-progress :percentage="item.num" :text-inside="true" :stroke-width="18"></el-progress>
+              <el-progress :percentage="item.value" :text-inside="true" :stroke-width="18"></el-progress>
             </div>
            
           </el-card>
@@ -360,6 +360,7 @@
           date:begin,
           project_name:this.name,
           project_id:this.id,
+          weather:this.weather,
           schedule:schedule,
           artificial:this.artificial,
           material:this.material,
@@ -374,7 +375,11 @@
             }
         })
         .then((res)=>{
-          console.log(res)
+          // console.log(res)
+          if(res.data.status==1){
+            this.$message.success("保存成功")
+            this.$router.push({name:'junshi'})
+          }
         })
         .catch((error)=>{
           this.$message.error("未知错误,请重试")
